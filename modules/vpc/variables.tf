@@ -14,3 +14,9 @@ variable "enable_internet_gateway" {
   type        = bool
   default     = false
 }
+
+variable "enable_s3_endpoint" {
+  description = "S3エンドポイントを有効化するかどうか"
+  type        = bool
+  default     = true
+}
