@@ -41,3 +41,9 @@ resource "aws_route_table_association" "this" {
   subnet_id      = each.value.id
   route_table_id = aws_route_table.this.id
 }
+
+resource "aws_vpc_endpoint_route_table_association" "s3" {
+  count           = var.s3_endpoint_id != null ? 1 : 0
+  route_table_id  = aws_route_table.this.id
+  vpc_endpoint_id = var.s3_endpoint_id
+}

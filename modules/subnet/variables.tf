@@ -28,3 +28,9 @@ variable "igw_id" {
   type        = string
   default     = null
 }
+
+variable "s3_endpoint_id" {
+  description = "S3 VPCエンドポイントのID（S3エンドポイントを使用する場合に必須）"
+  type        = string
+  default     = null
+}
